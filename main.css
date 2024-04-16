@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header,
+section h2,
+section h3,
+form button {
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+}
+
+header {
+    padding: 16px 0;
+    background-color: rgb(238, 147, 10);
+    color: #010b0e;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+header nav li a {
+    color: #010b0e;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+section img {
+    max-width: 100%;
+}
+
+section {
+    padding: 24px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid;
+}
+
+.store-front {
+    margin-right: 32px;
+}
+
+.container-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+}
+
+.container-grid li h3 {
+    margin: 16px 0;
+}
+
+.container-grid li p {
+    margin: 16px 0;
+}
+
+.container-grid li button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: rgb(238, 147, 10);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    #about .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .container-grid {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 1%;
+        row-gap: 1%;
+    }
+    }
+
+@media screen and (max-width: 640px) {
+    #about .container {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .container-grid {
+        display: block;
+    }
+
+    .container-grid li button {
+        margin-bottom: 16px;
+    }
+}
